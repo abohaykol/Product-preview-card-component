@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --color-darkcyan: hsl(158, 36%, 37%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-verydarkblue: hsl(30, 38%, 92%);
+  --color-darkgrayishblue: hsl(30, 38%, 92%);
+  --color-white: hsl(30, 38%, 92%);
+}
+
+/* typography */
+
+/* font-family: 'Montserrat', sans-serif; */
+/* 500,700 */
+/* font-family: 'Fraunces', serif; */
+/* 700 */
+p {
+  font-size: 14px;
+  margin: 0;
+  color: gray;
+  font-family: "Montserrat", sans-serif;
+}
+h2 {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  margin-top: 0;
+  padding: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+h3 {
+  color: var(--color-darkcyan);
+  font-size: 2rem;
+  font-family: "Fraunces", serif;
+  margin: 20px 0;
+}
+.discount {
+  margin: 0 20px;
+  text-decoration: line-through;
+}
+.title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+.description {
+  line-height: 23px;
+  word-spacing: 2px;
+}
+
+/* design */
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-cream);
+}
+.plan {
+  max-width: 375px;
+  overflow: hidden;
+}
+.card {
+  display: grid;
+  grid-template-rows: auto auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.desktop {
+  display: none;
+}
+img {
+  width: 100%;
+}
+.section-1 img {
+  display: block;
+}
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 1.7rem;
+  background-color: white;
+}
+.media {
+  display: flex;
+  align-items: center;
+}
+button {
+  padding: 1rem 0;
+  border: 0;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--color-darkcyan);
+  display: block;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+button::before {
+  margin-right: 10px;
+  content: url(files/images/icon-cart.svg);
+}
+button:hover {
+  background-color: hsl(158, 36%, 24%);
+}
+@media (min-width: 1440px) {
+  .plan {
+    max-width: 570px;
+  }
+  .card {
+    grid-template-columns: 50% 50%;
+  }
+  img {
+    height: 100%;
+  }
+  button {
+    padding: 0.9rem 0;
+  }
+}
